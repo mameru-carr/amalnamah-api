@@ -1,6 +1,6 @@
 using Todo.Adapters.Database;
 
-namespace Todo.Entities.TodoList;
+namespace Todo.Core.Entities.TodoList;
 
 public interface TodoListDatabasePort
 {

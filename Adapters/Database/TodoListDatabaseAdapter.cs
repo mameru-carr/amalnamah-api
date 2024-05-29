@@ -1,5 +1,5 @@
 using Todo.Adapters.Database.Context;
-using Todo.Entities.TodoList;
+using Todo.Core.Entities.TodoList;
 
 namespace Todo.Adapters.Database;
 
