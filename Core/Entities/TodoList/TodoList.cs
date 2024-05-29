@@ -4,21 +4,19 @@ namespace Todo.Entities.TodoList;
 
 public interface TodoListDatabasePort
 {
-    public List<Records.Todo> GetAllTodos();
-    public Records.Todo SaveNewTodo(Records.Todo todo);
+    public List<Core.Records.Todo> GetAllTodos();
+    public Core.Records.Todo SaveNewTodo(Core.Records.Todo todo);
 }
 
-public class TodoList
+public class TodoList(TodoListDatabaseAdapter todoListDatabase)
 {
-    private readonly TodoListDatabaseAdapter _todoListDatabase = new();
-    
-    public List<Records.Todo> GetAllTodos()
+    public List<Core.Records.Todo> GetAllTodos()
     {
-        return _todoListDatabase.GetAllTodos();
+        return todoListDatabase.GetAllTodos();
     }
 
-    public Records.Todo CreateNewTodo(Records.Todo todo)
+    public Core.Records.Todo CreateNewTodo(Core.Records.Todo todo)
     {
-        return _todoListDatabase.SaveNewTodo(todo);
+        return todoListDatabase.SaveNewTodo(todo);
     }
 }

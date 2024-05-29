@@ -8,7 +8,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 // Database
-builder.Services.AddSqlite<TodoSqliteContext>("Data Source=Todo.db");
+builder.Services.AddSqlite<TodoContext>("Data Source=Todo.db");
 
 builder.Services.AddLogging();
 builder.Services.AddCors(options =>

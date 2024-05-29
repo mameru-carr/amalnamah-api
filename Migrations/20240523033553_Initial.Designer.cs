@@ -10,7 +10,7 @@ using Todo.Adapters.Database.Context;
 
 namespace Todo.Migrations
 {
-    [DbContext(typeof(TodoSqliteContext))]
+    [DbContext(typeof(TodoContext))]
     [Migration("20240523033553_Initial")]
     partial class Initial
     {
