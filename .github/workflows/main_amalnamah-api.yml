@@ -12,6 +12,9 @@ on:
 jobs:
   build:
     runs-on: windows-latest
+    defaults:
+      run:
+        working-directory: "./"
 
     steps:
       - uses: actions/checkout@v4
@@ -26,7 +29,7 @@ jobs:
         run: nuget restore
 
       - name: Publish to folder
-        run: msbuild Todo.csproj /nologo /verbosity:m /t:Build /p:OutDir="/publish" 
+        run: msbuild Todo.csproj /nologo /verbosity:m /t:Build /p:OutputPath="./publish" 
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
@@ -42,6 +45,9 @@ jobs:
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
     permissions:
       id-token: write #This is required for requesting the JWT
+    defaults:
+      run:
+        working-directory: "./"
 
     steps:
       - name: Download artifact from build job
