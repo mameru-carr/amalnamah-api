@@ -7,6 +7,8 @@
 ![Dependabot](https://badgen.net/github/dependabot/mameru-carr/amalnamah-api)
 ![Dependencies](https://img.shields.io/librariesio/github/mameru-carr/amalnamah-api)
 ![Milestones](https://badgen.net/github/milestones/mameru-carr/amalnamah-api/1)
+
+[![forthebadge](https://forthebadge.com/images/badges/made-with-c-sharp.svg)](https://forthebadge.com)
 ---
 # Amalnamah API
 

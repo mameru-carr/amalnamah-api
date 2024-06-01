@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Todo", "Todo.csproj", "{70112AB7-54A5-4A3C-9998-4686DB1D3094}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "amalnamah-api", "amalnamah-api.csproj", "{70112AB7-54A5-4A3C-9998-4686DB1D3094}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
