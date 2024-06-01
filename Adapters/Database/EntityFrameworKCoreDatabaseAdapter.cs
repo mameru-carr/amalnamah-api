@@ -3,7 +3,7 @@ using Todo.Core.Entities.TodoList;
 
 namespace Todo.Adapters.Database;
 
-public class TodoListDatabaseAdapter(TodoContext _dbContext) : TodoListDatabasePort
+public class EntityFrameworKCoreDatabaseAdapter(TodoContext _dbContext) : TodoListDatabasePort
 {
     public List<Core.Records.Todo> GetAllTodos()
     {

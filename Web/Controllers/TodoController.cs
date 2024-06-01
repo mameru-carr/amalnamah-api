@@ -13,7 +13,7 @@ public static class TodoController
             .Options
         );
     
-    private static readonly TodoList TodoList = new(new TodoListDatabaseAdapter(_dbContext));
+    private static readonly TodoList TodoList = new(new EntityFrameworKCoreDatabaseAdapter(_dbContext));
 
     public static IResult GetAllTodos(HttpContext context)
     {
