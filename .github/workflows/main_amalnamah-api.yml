@@ -25,20 +25,14 @@ jobs:
       - name: Restore NuGet packages
         run: nuget restore
 
-      - name: Dir
-        run: dir
-
       - name: Publish to folder
-        run: msbuild Todo.csproj /nologo /verbosity:detailed /t:Build /p:OutputPath="/publish" 
-
-      - name: Dir
-        run: dir
-
+        run: msbuild Todo.csproj /nologo /verbosity:detailed /t:Build /p:OutDir="\publish"
+        
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
         with:
           name: ASP-app
-          path: '/published/**'
+          path: '\published\**'
 
   deploy:
     runs-on: windows-latest
