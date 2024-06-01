@@ -29,7 +29,7 @@ jobs:
         run: dir
 
       - name: Publish to folder
-        run: msbuild Todo.csproj /nologo /verbosity:m /t:Build /p:OutputPath="/publish" 
+        run: msbuild Todo.csproj /nologo /verbosity:detailed /t:Build /p:OutputPath="/publish" 
 
       - name: Dir
         run: dir
