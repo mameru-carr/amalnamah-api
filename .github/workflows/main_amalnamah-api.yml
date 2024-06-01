@@ -27,6 +27,9 @@ jobs:
 
       - name: Publish to folder
         run: msbuild Todo.csproj /nologo /verbosity:detailed /t:Build /p:OutDir="\publish"
+
+      - name: Dir
+        run: cd \ && dir
         
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
