@@ -14,13 +14,15 @@ jobs:
     runs-on: windows-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4.1.6
 
       - name: Setup MSBuild path
-        uses: microsoft/setup-msbuild@v1.0.2
+        uses: microsoft/setup-msbuild@v2
 
       - name: Setup NuGet
-        uses: NuGet/setup-nuget@v1.0.5
+        uses: NuGet/setup-nuget@v2.0.0
+        with:
+          nuget-version: 'latest'
 
       - name: Restore NuGet packages
         run: nuget restore
@@ -28,14 +30,11 @@ jobs:
       - name: Publish to folder
         run: msbuild Todo.csproj /nologo /verbosity:detailed /t:Build /p:OutDir="\publish"
 
-      - name: Dir
-        run: cd \ && dir
-        
       - name: Upload artifact for deployment job
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: ASP-app
-          path: 'D:\published\**'
+          path: 'D:\published'
 
   deploy:
     runs-on: windows-latest
@@ -48,12 +47,12 @@ jobs:
 
     steps:
       - name: Download artifact from build job
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: ASP-app
       
       - name: Login to Azure
-        uses: azure/login@v1
+        uses: azure/login@v2.1.1
         with:
           client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_C39F32BC643A44F5973F9DC75B67010C }}
           tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_1979A45CF75D4AE6B0A67E08B74B0564 }}
