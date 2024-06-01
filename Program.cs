@@ -28,11 +28,11 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.Logger.LogInformation("Running in Development Mode.");
-    
-    // Swagger Middleware
-    app.UseSwagger();
-    app.UseSwaggerUI();
 }
+
+// Swagger Middleware
+app.UseSwagger();
+app.UseSwaggerUI();
 
 // Middlewares
 app.UseCors("FrontEnd");
