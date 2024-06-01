@@ -8,7 +8,7 @@ public interface TodoListDatabasePort
     public Core.Records.Todo SaveNewTodo(Core.Records.Todo todo);
 }
 
-public class TodoList(EntityFrameworKCoreDatabaseAdapter entityFrameworKCoreDatabase)
+public class TodoList(TodoListDatabasePort entityFrameworKCoreDatabase)
 {
     public List<Core.Records.Todo> GetAllTodos()
     {

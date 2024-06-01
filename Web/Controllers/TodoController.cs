@@ -1,20 +1,21 @@
-using Microsoft.EntityFrameworkCore;
+// using Todo.Adapters.Database.Context;
+// using Microsoft.EntityFrameworkCore;
 using Todo.Adapters.Database;
-using Todo.Adapters.Database.Context;
 using Todo.Core.Entities.TodoList;
 
 namespace Todo.Web.Controllers;
 
 public static class TodoController
 {
-    private static readonly TodoContext _dbContext = new (
-        new DbContextOptionsBuilder<TodoContext>()
-            .UseSqlite("Data Source=Todo.db")
-            .Options
-        );
+    // private static readonly TodoContext _dbContext = new (
+    //     new DbContextOptionsBuilder<TodoContext>()
+    //         .UseSqlite("Data Source=Todo.db")
+    //         .Options
+    //     );
     
-    private static readonly TodoList TodoList = new(new EntityFrameworKCoreDatabaseAdapter(_dbContext));
+    // private static readonly TodoList TodoList = new(new EntityFrameworKCoreDatabaseAdapter(_dbContext));
 
+    private static readonly TodoList TodoList = new(new ListDatabaseAdapter());
     public static IResult GetAllTodos(HttpContext context)
     {
         return Results.Json(TodoList.GetAllTodos());
