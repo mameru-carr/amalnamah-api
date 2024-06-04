@@ -1,7 +1,7 @@
 using Microsoft.OpenApi.Models;
 using Todo.Web.Controllers;
 
-namespace Todo.Web.Routes;
+namespace Todo.Web.Routes.v1;
 
 public static class TodoRoutes
 {

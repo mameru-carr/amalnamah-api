@@ -1,5 +1,6 @@
 using Todo.Adapters.Database.Context;
 using Todo.Web.Routes;
+using Todo.Web.Routes.v1;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -54,6 +55,6 @@ app.MapGet("/check", () =>
         return generatedOperation;
     });
 
-app.MapApiRoutes();
+app.MapApiRoutesV1();
 
 app.Run();
