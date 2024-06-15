@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "API\API.csproj", "{414A50E7-67D3-4D2E-9910-77EA25F9B82A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseAdapters", "DatabaseAdapters\DatabaseAdapters.csproj", "{88051B3A-AC81-4B03-9C26-DC05617BA045}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{414A50E7-67D3-4D2E-9910-77EA25F9B82A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{414A50E7-67D3-4D2E-9910-77EA25F9B82A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{414A50E7-67D3-4D2E-9910-77EA25F9B82A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88051B3A-AC81-4B03-9C26-DC05617BA045}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88051B3A-AC81-4B03-9C26-DC05617BA045}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88051B3A-AC81-4B03-9C26-DC05617BA045}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88051B3A-AC81-4B03-9C26-DC05617BA045}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
